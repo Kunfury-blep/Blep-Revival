@@ -1,0 +1,8 @@
+name: BlepRevival
+main: com.kunfury.blepRevival.Setup
+version: 0.1
+api-version: 1.13
+commands:
+   Blep:
+      description: The base command for the plugin
+      usage: /Blep
