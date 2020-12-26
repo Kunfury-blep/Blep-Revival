@@ -9,7 +9,6 @@ import java.io.ObjectOutputStream;
 import java.nio.file.Files;
 import java.util.List;
 
-import org.bukkit.Bukkit;
 
 public class FileHandler {
 
