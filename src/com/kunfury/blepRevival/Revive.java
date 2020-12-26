@@ -50,12 +50,11 @@ public class Revive implements Listener {
 	@EventHandler
 	public void onPlayerInteract(PlayerInteractEvent e) {	
 		
-		Player player = e.getPlayer();	
-		hItem = e.getItem();		
+		Player player = e.getPlayer();			
 		
-		if((e.getAction().equals(Action.RIGHT_CLICK_AIR) || e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) && e.hasItem() && hItem.equals(token)) {
+		if((e.getAction().equals(Action.RIGHT_CLICK_AIR) || e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) && e.hasItem() && e.getItem().equals(token)) {
+			hItem = e.getItem();
 			inv = Bukkit.createInventory(null, 54, "Fallen Heroes");
-			
 			trimmedPlayers.clear();
 			DeadPlayers.forEach(p -> {
 				if(Bukkit.getPlayer(p.GetUUID()) != null && !trimmedPlayers.contains(p)) {
